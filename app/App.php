@@ -18,7 +18,7 @@ class App
      *
      * @var string
      */
-    private $file;
+    private $pathToFile;
 
     /**
      * Config
@@ -37,9 +37,9 @@ class App
      */
     private $format;
 
-    public function __construct($file, $config)
+    public function __construct(string $pathToFile, array $config)
     {
-        $this->file = $file;
+        $this->pathToFile = $pathToFile;
         $this->config = $config;
     }
 
@@ -82,7 +82,7 @@ class App
      */
     private function readFile(): \Generator
     {
-        $file = new \SplFileObject($this->file);
+        $file = new \SplFileObject($this->pathToFile);
 
         while (!$file->eof()) {
             yield $file->fgets();
