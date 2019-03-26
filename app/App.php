@@ -32,11 +32,6 @@ class App
      */
     private $analytics = [];
 
-    /**
-     * @var FormatInterface
-     */
-    private $format;
-
     public function __construct(string $pathToFile, array $config)
     {
         $this->pathToFile = $pathToFile;
