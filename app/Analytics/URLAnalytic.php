@@ -36,7 +36,7 @@ class URLAnalytic implements AnalyticInterface, FormatableInterface
     /**
      * @return string
      */
-    public function getFiledKey(): string
+    public function getFieldKey(): string
     {
         return $this->key;
     }

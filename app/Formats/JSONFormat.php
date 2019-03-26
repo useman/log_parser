@@ -17,7 +17,7 @@ class JSONFormat extends FormatAbstract implements FormatInterface
         $result = [];
 
         foreach ($arr as $item) {
-            $result[$item->getFiledKey()] = $item->getFieldData();
+            $result[$item->getFieldKey()] = $item->getFieldData();
         }
 
         $jsonResult = json_encode($result, JSON_PRETTY_PRINT);

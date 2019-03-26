@@ -8,7 +8,7 @@ interface CrawlerInterface
     /**
      * @return string
      */
-    public function getFiledKey(): string;
+    public function getFieldKey(): string;
 
     /**
      * @param string $agent

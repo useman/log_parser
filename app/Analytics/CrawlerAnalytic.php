@@ -59,12 +59,12 @@ class CrawlerAnalytic implements AnalyticInterface, FormatableInterface
 
             foreach ($this->crawlers as $crawler) {
 
-                if (!array_key_exists($crawler->getFiledKey(), $this->data)) {
-                    $this->data[$crawler->getFiledKey()] = 0;
+                if (!array_key_exists($crawler->getFieldKey(), $this->data)) {
+                    $this->data[$crawler->getFieldKey()] = 0;
                 }
 
                 if ($crawler->check($agent)) {
-                    $this->data[$crawler->getFiledKey()]++;
+                    $this->data[$crawler->getFieldKey()]++;
                 }
             }
         }
@@ -73,7 +73,7 @@ class CrawlerAnalytic implements AnalyticInterface, FormatableInterface
     /**
      * @return string
      */
-    public function getFiledKey(): string
+    public function getFieldKey(): string
     {
         return $this->key;
     }
